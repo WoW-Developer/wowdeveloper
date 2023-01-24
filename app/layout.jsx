@@ -1,14 +1,21 @@
-import './globals.css'
+import "./global.css";
+import { Raleway } from "@next/font/google";
+import NAV from "./NAV";
+
+const raleway = Raleway({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html>
       <head />
-      <body>{children}</body>
+      <body className={raleway.className}>
+        <div className="flex flex-col">
+          <NAV />
+          <div className="fixed w-screen h-screen  overflow-y-scroll ">
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
-  )
+  );
 }
