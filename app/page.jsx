@@ -1,7 +1,19 @@
 import Quote from "./quote";
 
-export default function Page() {
-  const finaldata = getdata();
+export async function getdata() {
+  const res = await fetch(`https://type.fit/api/quotes`,{next:{revalidate:60}})
+  const data = await res.json()
+  var ln= Object.keys(data).length;
+  
+  let x = Math.floor(Math.random() * ln - 1);
+  const finaldata = await data[x]
+  return finaldata // will be passed to the page component as props}
+}
+ 
+
+export default async function Page() {
+  const finaldata = await getdata();
+  console.log(finaldata)
   return (
     <div
       className="w-full flex flex-col justify-center
@@ -16,10 +28,10 @@ export default function Page() {
         </h1>
       </section>
       <section
-        className="h-screen sm:p-14 w-full snap-center flex items-center justify-center mx-auto
+        className="h-screen max-w-[1000px] sm:p-14 w-full snap-center flex items-center justify-center mx-auto
         text-xl sm:text-2xl"
       >
-        <Quote quote={finaldata.text} author={finaldata.author} />
+        <Quote  quote={finaldata.text} author={finaldata.author} />
       </section>
     </div>
   );
