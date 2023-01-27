@@ -11,9 +11,13 @@ background-color: #FF3CAC;
 *{
     padding: 0%;
     margin: 0%;
+<<<<<<< HEAD
     /* scroll-snap-type: y mandatory; */
     scrollbar-width: none;
     scroll-behavior: smooth;
+=======
+    scroll-snap-type: y mandatory;
+>>>>>>> cfef5c03b4f12aff37b307ed99dcfdd0b99ad57e
 }
 
 
