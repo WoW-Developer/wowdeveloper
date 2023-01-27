@@ -1,10 +1,10 @@
-import './global.css'
+import "./global.css";
 export default function Head() {
   return (
     <>
-      <title></title>
+      <title>WoW Developer</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <link rel="icon" href="/favicon.ico" />
     </>
-  )
+  );
 }

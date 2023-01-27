@@ -1,17 +1,18 @@
 import "./global.css";
-import { Raleway } from "@next/font/google";
+import { Lexend } from "@next/font/google";
 import NAV from "./NAV";
-
-const raleway = Raleway({ subsets: ["latin"] });
+const lex = Lexend({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
+  
+  
   return (
-    <html>
+    <html>      
       <head />
-      <body className={raleway.className}>
-        <div className="flex flex-col">
-          <NAV />
-          <div className="fixed w-screen h-screen  overflow-y-scroll ">
+      <body className={lex.className}>
+        <div className="flex flex-col tracking-tight">
+          <div className="w-full h-screen ">
+            <NAV />
             {children}
           </div>
         </div>

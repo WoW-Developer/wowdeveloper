@@ -1,37 +1,40 @@
 import Quote from "./quote";
+import {AiFillDownCircle} from 'react-icons/ai'
+import Link from "next/link";
 
-export async function getdata() {
-  const res = await fetch(`https://type.fit/api/quotes`,{next:{revalidate:60}})
-  const data = await res.json()
-  var ln= Object.keys(data).length;
-  
-  let x = Math.floor(Math.random() * ln - 1);
-  const finaldata = await data[x]
-  return finaldata // will be passed to the page component as props}
-}
- 
 
 export default async function Page() {
-  const finaldata = await getdata();
-  console.log(finaldata)
+
+
+ 
+  
+
   return (
     <div
-      className="w-full flex flex-col justify-center
-    snap-y"
+      className="w-full flex flex-col pl-3 pr-3 justify-center"
     >
+      {/* Section */}
       <section
-        className="h-screen sm:p-14 w-full snap-center flex items-center justify-center mx-auto
+        className="h-screen sm:pt-14 w-full flex-col  flex items-center justify-center mx-auto
         text-xl sm:text-2xl"
       >
-        <h1 className="text-black  sm:p-14 self-center text-center max-w-[1000px] blod  text-3xl sm:text-5xl">
+        <h1 className="text-black font-bold self-center text-center max-w-[800px] text-3xl sm:text-5xl">
           Welcome to WoW Developer.
         </h1>
+        <h1 className="text-black self-center text-center max-w-[800px] p-2 bold  text-xl sm:text-2xl">
+          I'm a full stack web developer specializing in React, React Native,
+          Android, and Next.js. Ready to create the future of web development!
+        </h1>
+
+      <p className="text-center updn pt-7">Scroll Down<AiFillDownCircle className="text-center mx-auto" size={40}/></p>
       </section>
-      <section
-        className="h-screen max-w-[1000px] sm:p-14 w-full snap-center flex items-center justify-center mx-auto
-        text-xl sm:text-2xl"
-      >
-        <Quote  quote={finaldata.text} author={finaldata.author} />
+
+      {/* Section */}
+
+      <section id="quote"
+        className="h-screen max-w-[1000px] sm:pt-14 w-full snap-center flex items-center justify-center mx-auto
+        text-xl sm:text-2xl">
+        <Quote/>
       </section>
     </div>
   );
