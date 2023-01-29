@@ -4,12 +4,12 @@ const supabaseUrl = process.env.SUPA_URL
 const supabaseKey = process.env.SUPA_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
-const fetchSingleBlogData = async (params.id) => {
+const fetchSingleBlogData = async (prop) => {
 
   let { data: Blogs, error } = await supabase
   .from('Blogs')
   .select('*')
-  .eq('uuid',params.id)
+  .eq('uuid',prop )
   var ss ={data:Blogs};
   var xx= await ss!=null?ss.data[0]:[];
   return xx
