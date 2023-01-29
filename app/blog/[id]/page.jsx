@@ -22,8 +22,8 @@ export async function getData(id){
 }
 
 export default async function Page({params}) {
-  
-  const xx= await getData(params.id);
+  try{
+  var xx= await getData(params.id);
   console.log(xx)
   
   return (
@@ -33,5 +33,8 @@ export default async function Page({params}) {
                 <div className="text-xl mt-1">Published on :- {xx.date}</div>
                 <div className="text-2xl mt-1">{xx.description}</div>
     </div>
-  )
+  )}
+  catch(error){
+  console.log(error)
+  }
 }
