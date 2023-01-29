@@ -13,13 +13,14 @@ export default async function Page({params}) {
   var ss ={data:Blogs};
   var xx= await ss.data
   
-  const query = xx;
+  
+  if(xx.title!=null,xx.description!=null,xx.date!=null,xx.image!=null){
   return (
     <div className="h-full w-full mx-auto p-4 max-w-[600px] pt-16 flex flex-col ">
-                <div className="h-64 w-full p-2 rounded-lg" style={{ backgroundImage: `url(${query.image})` }}/>
-                <div className="text-3xl capitalize mt-2 font-semibold">{query.title}</div>
-                <div className="text-xl mt-1">Published on :- {query.date}</div>
-                <div className="text-2xl mt-1">{query.description}</div>
+                <div className="h-64 w-full p-2 rounded-lg" style={{ backgroundImage: `url(${xx.image})` }}/>
+                <div className="text-3xl capitalize mt-2 font-semibold">{xx.title}</div>
+                <div className="text-xl mt-1">Published on :- {xx.date}</div>
+                <div className="text-2xl mt-1">{xx.description}</div>
     </div>
-  );
+  );}
 }
