@@ -9,11 +9,10 @@ const fetchSingleBlogData = async (id) => {
   let { data: Blogs, error } = await supabase
   .from('Blogs')
   .select('*')
-  .eq('uuid',id)
+  .eq('uuid',id!=null?id:1)
   var ss ={data:Blogs};
-  var xx= await ss.data[0];
+  var xx= await ss!=null?ss.data[0]:[];
   return xx
-
 };
 
 export default async function Page({params}) {
