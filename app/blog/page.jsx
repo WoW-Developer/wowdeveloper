@@ -47,8 +47,7 @@ const page = async () => {
               </div>
               <Link
                 className="text-primary p-2 pb-0 absolute bottom-0"
-                href={`/blog/${xata.uuid}`}
-                prefetch={false}>
+                href={`/blog/${xata.uuid}`}>
                 Read More
               </Link>
             </div>
