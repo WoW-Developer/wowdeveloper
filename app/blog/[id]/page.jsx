@@ -4,17 +4,6 @@ const supabaseUrl = process.env.SUPA_URL
 const supabaseKey = process.env.SUPA_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
-const fetchSingleBlogData = async (prop) => {
-
-  
-  if(ss!=null){
-
-if(ss==null){
-var xx={}
-}
-  return xx
-};
-
 export default async function Page({params}) {
   
   let { data: Blogs, error } = await supabase
