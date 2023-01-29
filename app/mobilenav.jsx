@@ -36,7 +36,7 @@ const mobilenav = () => {
   );
 };
 
-const show = `fixed top-0 right-0 ease-in duration-400 left-0 sm:hidden`;
+const show = `fixed top-0 right-0 z-[50] ease-in duration-400 left-0 sm:hidden`;
 const hide = `fixed top-[-1080px] right-0 opacity-0 ease-out duration-400 left-0 sm:hidden`;
 const textstyle = `hover:text-white  text-xl hover:align-top p-2 rounded-lg`;
 export default mobilenav;
