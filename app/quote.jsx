@@ -21,7 +21,7 @@ const herodiv = async () => {
           {finaldata.text}
         </h1>
         <h1 className="text-xl sm:text-2xl  text-center mt-5 underline underline-offset-8">
-          &quot;{finaldata.author.length > 0 ? finaldata.author : "Un-known"}
+          &quot;{finaldata!=null&&finaldata.author.length > 0 ? finaldata.author : "Un-known"}
           &quot;
         </h1>
       </section>
