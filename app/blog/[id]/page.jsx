@@ -6,13 +6,9 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 
 const fetchSingleBlogData = async (prop) => {
 
-  let { data: Blogs, error } = await supabase
-  .from('Blogs')
-  .select('*')
-  .eq('uuid',prop!=null?prop:'af27c84d-32bb-4401-8e51-2569322ad88a' )
-  var ss ={data:Blogs};
+  
   if(ss!=null){
-  var xx= await ss.data[0]}
+
 if(ss==null){
 var xx={}
 }
@@ -21,7 +17,14 @@ var xx={}
 
 export default async function Page({params}) {
   
-  const query = await fetchSingleBlogData(params.id);
+  let { data: Blogs, error } = await supabase
+  .from('Blogs')
+  .select('*')
+  .eq('uuid',params.id!=null?params.id:'af27c84d-32bb-4401-8e51-2569322ad88a' )
+  var ss ={data:Blogs};
+    var xx= await ss.data[0]
+  
+  const query = xx;
   return (
     <div className="h-full w-full mx-auto p-4 max-w-[600px] pt-16 flex flex-col ">
                 <div className="h-64 w-full p-2 rounded-lg" style={{ backgroundImage: `url(${query.image})` }}/>
