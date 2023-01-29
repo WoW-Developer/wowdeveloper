@@ -11,7 +11,7 @@ export default async function Page({params}) {
   .select('*')
   .eq('uuid',params.id!=null?params.id:'af27c84d-32bb-4401-8e51-2569322ad88a' )
   var ss ={data:Blogs};
-  var xx= await ss.data[0]
+  var xx= await ss.data
   
   const query = xx;
   return (
