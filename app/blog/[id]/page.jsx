@@ -12,7 +12,7 @@ export default async function Page({params}) {
   .eq('uuid',params.id!=null?params.id:'af27c84d-32bb-4401-8e51-2569322ad88a' )
   var ss ={data:Blogs};
   var xx= await ss.data
-  
+  console.log(xx)
   
   if(xx.title!=null,xx.description!=null,xx.date!=null,xx.image!=null){
   return (
