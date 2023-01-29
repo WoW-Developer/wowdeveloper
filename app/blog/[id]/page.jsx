@@ -9,7 +9,7 @@ const fetchSingleBlogData = async (prop) => {
   let { data: Blogs, error } = await supabase
   .from('Blogs')
   .select('*')
-  .eq('uuid','3dcb9526-40dc-427d-abbd-09297b313609' )
+  .eq('uuid',prop?prop:'af27c84d-32bb-4401-8e51-2569322ad88a' )
   var ss ={data:Blogs};
   var xx= await ss!=null?ss.data[0]:{};
   return xx
