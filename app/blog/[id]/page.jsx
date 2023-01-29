@@ -31,7 +31,7 @@ export default async function Page({params}) {
                 <div className="text-2xl mt-1">{xx.description}</div>
              
              </div>
-             ))  
+             ))  }
     </div>
   )
 }
