@@ -11,7 +11,11 @@ const fetchSingleBlogData = async (prop) => {
   .select('*')
   .eq('uuid',prop!=null?prop:'af27c84d-32bb-4401-8e51-2569322ad88a' )
   var ss ={data:Blogs};
-  var xx= await ss!=null?ss.data[0]:{};
+  if(ss!=null){
+  var xx= await ss.data[0]}
+if(ss==null){
+var xx={}
+}
   return xx
 };
 
