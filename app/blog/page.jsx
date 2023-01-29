@@ -24,7 +24,7 @@ const fetchBlogData = async () => {
 const page = async () => {
   const data = await fetchBlogData();
   return (
-    <div className="w-full font-semibold p-4 h-full items-center text-black justify-center ">
+    <div className="w-full font-semibold p-4 h-full items-center text-black justify-center z-10">
       <div className="grid pt-14 place-content-center sm:grid-cols-2 w-full mx-auto max-w-[800px] gap-2">
         {data.map((xata) => (
           <div
