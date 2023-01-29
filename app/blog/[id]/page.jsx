@@ -5,13 +5,13 @@ const supabaseKey = process.env.SUPA_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 export default async function Page({params}) {
-  
+  var ss=[]
   let { data: Blogs, error } = await supabase
   .from('Blogs')
   .select('*')
   .eq('uuid',params.id!=null?params.id:'af27c84d-32bb-4401-8e51-2569322ad88a' )
   var ss ={data:Blogs};
-    var xx= await ss.data[0]
+  var xx= await ss.data[0]
   
   const query = xx;
   return (
