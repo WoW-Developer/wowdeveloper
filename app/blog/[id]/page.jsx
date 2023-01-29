@@ -9,7 +9,7 @@ export async function getData(id){
   id='af27c84d-32bb-4401-8e51-2569322ad88a'
   }
   try{
-  let { data: Blogs, error } = await supabase
+  var { data: Blogs, error } = await supabase
   .from('Blogs')
   .select('*')
   .eq('uuid',id)
