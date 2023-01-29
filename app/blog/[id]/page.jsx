@@ -23,7 +23,7 @@ export default async function Page({params}) {
   return (
   
     <div className="h-full w-full mx-auto p-4 max-w-[600px] pt-16 flex flex-col ">
-             {data.map((xx)=>(<div key={xx}>
+             {data?.map((xx)=>(<div key={xx}>
             
                <div className="h-64 w-full p-2 rounded-lg" style={{ backgroundImage: `url(${xx.image})` }}/>
                 <div className="text-3xl capitalize mt-2 font-semibold">{xx.title}</div>
