@@ -1,18 +1,11 @@
 import Quote from "./quote";
-import {AiFillDownCircle} from 'react-icons/ai'
-import Link from "next/link";
-
+import { Suspense } from "react";
+import SAXS from "./scrollto";
+import Loading from "./blog/loading";
 
 export default async function Page() {
-
-
- 
-  
-
   return (
-    <div
-      className="w-full flex flex-col pl-3 pr-3 justify-center"
-    >
+    <div className="w-full flex flex-col pl-3 pr-3 justify-center">
       {/* Section */}
       <section
         className="h-screen sm:pt-14 w-full flex-col  flex items-center justify-center mx-auto
@@ -25,16 +18,21 @@ export default async function Page() {
           I'm a full stack web developer specializing in React, React Native,
           Android, and Next.js. Ready to create the future of web development!
         </h1>
-
-      <p className="text-center updn pt-7">Scroll Down<AiFillDownCircle className="text-center mx-auto" size={40}/></p>
+        <Suspense fallback={<Loading/>}>
+        <SAXS />
+        </Suspense>
       </section>
 
       {/* Section */}
 
-      <section id="quote"
+      <section
+        id="quote"
         className="h-screen max-w-[1000px] sm:pt-14 w-full snap-center flex items-center justify-center mx-auto
-        text-xl sm:text-2xl">
-        <Quote/>
+        text-xl sm:text-2xl"
+      >
+        <Suspense fallback={<Loading />}>
+          <Quote />
+        </Suspense>
       </section>
     </div>
   );

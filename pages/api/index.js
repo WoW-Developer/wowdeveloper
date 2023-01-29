@@ -3,10 +3,10 @@
 export default function handler(req, res) {
     res.status(200).json({ 
       title: req.query.title,
-      author: req.query.author,
-      content: req.query.content,
-      publishedAt: req.query.publishedAt,
-      message: req.query.message
+      desc: req.query.description,
+      image: req.query.image,
+      date: req.query.date,
+      uuid: req.query.uuid,
      })
   }
   
