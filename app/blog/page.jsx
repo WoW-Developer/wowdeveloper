@@ -16,17 +16,9 @@ const fetchBlogData = async () => {
   .from('Blogs')
   .select('*')
   const ss ={data:Blogs}
-  const yy =ss.data
-  return yy // will be passed to the page component as props
+  const yy =ss?.data
+  return yy
 
-  // const x = await fetch(
-  //   "https://newsapi.org/v2/everything?apiKey=5300c567a8f54f018fb544a4134dcbc2&q=ambedkar&pageSize=5"
-  // );
-  // const y = await x.json();
-
-  // const article = Object(y.articles);
-  // //await delay(9000);
-  // return article;
 };
 
 const page = async () => {
