@@ -4,14 +4,26 @@ const supabaseUrl = process.env.SUPA_URL
 const supabaseKey = process.env.SUPA_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
-export default async function Page({params}) {
-  var ss=[]
+export async function getData(id){
+  if(id==null||id.length==0){
+  id='af27c84d-32bb-4401-8e51-2569322ad88a'
+  }
+  try{
   let { data: Blogs, error } = await supabase
   .from('Blogs')
   .select('*')
-  .eq('uuid',params.id!=null?params.id:'af27c84d-32bb-4401-8e51-2569322ad88a' )
+  .eq('uuid',id)
   var ss ={data:Blogs};
-  var xx= await ss.data
+  return ss[0]
+  }
+  catch(error){
+  console.log(error)
+  }
+}
+
+export default async function Page({params}) {
+  
+  const xx= await getData(params.id);
   console.log(xx)
   
   return (
