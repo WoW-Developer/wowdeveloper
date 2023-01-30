@@ -26,17 +26,15 @@ const page = async () => {
             key={xata}
             className="rounded-lg border-black border grid grid-cols-10 place-content-center gap-1 bg-extra_extra_light_grey"
           >
-            <div
-              className="col-span-4 bg-cover rounded-l-lg h-44"
-            >
+           
             <Image
+            className="col-span-4 bg-cover rounded-l-lg h-44"
       src={xata.image}
       width={500}
       height={500}
-      style={{objectFit: "contain"}}
+      style={{}}
       alt="Picture of the Blog Post"
     />
-            </div>
             <div className="col-span-6 relative h-full">
               <div className="p-2">
                 <h1>{xata.title}</h1>
