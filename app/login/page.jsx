@@ -55,7 +55,7 @@ const page = () => {
   return (
     <div className="max-h-full flex flex-row w-full h-full max-w-full">
       <button
-        className="text-2xl text-black whitespace-pre-line mx-auto my-auto"
+        className="text-2xl text-white rounded-sm bg-primary whitespace-pre-line mx-auto my-auto"
         onClick={startlogin}
       >
         {current?.uid
