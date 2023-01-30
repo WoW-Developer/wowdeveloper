@@ -30,7 +30,7 @@ export default async function Page({params}) {
       src={xx.image}
       height={600}
       width={600}
-      style={{object-fit:'cover', borderRadius: '50%',
+      style={{objectFit:'cover', borderRadius: '50%',
   border: '0.5px solid #000', }}
       alt="Picture of the Blog Post"
     />
