@@ -28,7 +28,7 @@ const page = async () => {
           >
            
             <Image
-            className="col-span-4 bg-cover rounded-l-lg h-44"
+            className="col-span-4 bg-cover rounded-l-lg h-60"
       src={xata.image}
       width={500}
       height={500}
