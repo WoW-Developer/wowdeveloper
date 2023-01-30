@@ -25,14 +25,17 @@ export default async function Page({params}) {
   
     <div className="h-full w-full mx-auto p-4 max-w-[600px] pt-16 flex flex-col ">
              {data?.map((xx)=>(<div key={xx}>
-            <Image
-            className="h-80 w-full p-2 rounded-lg"
+  <div className="h-80 w-full p-2 rounded-lg">          
+  <Image
       src={xx.image}
       width={500}
       height={500}
+      layout="fill",
+      objectFit="cover"
       style={{borderRadius: '5px', overflow: 'hidden'}}
       alt="Picture of the Blog Post"
     />
+        </div>
                 <div className="text-3xl capitalize mt-2 font-semibold">{xx.title}</div>
                 <div className="text-xl mt-1">Published on :- {xx.date}</div>
                 <div className="text-2xl mt-1">{xx.description}</div>
