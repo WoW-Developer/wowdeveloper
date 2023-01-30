@@ -1,5 +1,6 @@
 
 import { createClient } from '@supabase/supabase-js'
+import Image from 'next/image';
 const supabaseUrl = process.env.SUPA_URL
 const supabaseKey = process.env.SUPA_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
@@ -25,7 +26,16 @@ export default async function Page({params}) {
     <div className="h-full w-full mx-auto p-4 max-w-[600px] pt-16 flex flex-col ">
              {data?.map((xx)=>(<div key={xx}>
             
-               <div className="h-64 w-full p-2 rounded-lg" style={{ backgroundImage: `url(${xx.image})` }}/>
+               <div className="h-64 w-full p-2 rounded-lg">
+                
+            <Image
+      src=`${xx.image}`
+      width={500}
+      height={500}
+      style={{objectFit: "contain"}}
+      alt="Picture of the Blog Post"
+    />
+              </div>
                 <div className="text-3xl capitalize mt-2 font-semibold">{xx.title}</div>
                 <div className="text-xl mt-1">Published on :- {xx.date}</div>
                 <div className="text-2xl mt-1">{xx.description}</div>
