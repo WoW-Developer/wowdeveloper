@@ -25,7 +25,7 @@ export default async function Page({params}) {
   
     <div className="h-full w-full mx-auto p-4 max-w-[600px] pt-16 flex flex-col ">
              {data?.map((xx)=>(<div key={xx}>
-  <div className="h-80 w-full p-2 rounded-lg">          
+  <div className="h-80 w-full p-2 rounded-lg overflow-hidden">          
   <Image
       src={xx.image}
       height={1080}
