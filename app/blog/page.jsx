@@ -30,7 +30,7 @@ const page = async () => {
               className="col-span-4 bg-cover rounded-l-lg h-44"
             >
             <Image
-      src=`${xata.image}`
+      src={xata.image}
       width={500}
       height={500}
       style={{objectFit: "contain"}}
