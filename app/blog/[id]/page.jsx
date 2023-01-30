@@ -28,8 +28,7 @@ export default async function Page({params}) {
   <div className="h-80 w-full border border-2 p-2 border-slate-50 rounded-3xl overflow-hidden">          
   <Image
       src={xx.image}
-      height={1080}
-      width={1920}
+     fill={true}
       style={{objectFit:'cover'}}
       alt="Picture of the Blog Post"
     />
