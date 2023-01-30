@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-
+import Image from 'next/image';
 import { createClient } from "@supabase/supabase-js";
 
 const supabaseUrl = process.env.SUPA_URL;
@@ -28,8 +28,15 @@ const page = async () => {
           >
             <div
               className="col-span-4 bg-cover rounded-l-lg h-44"
-              style={{ backgroundImage: `url(${xata.image})` }}
-            />
+            >
+            <Image
+      src=`${xata.image}`
+      width={500}
+      height={500}
+      style={{objectFit: "contain"}}
+      alt="Picture of the Blog Post"
+    />
+            </div>
             <div className="col-span-6 relative h-full">
               <div className="p-2">
                 <h1>{xata.title}</h1>
