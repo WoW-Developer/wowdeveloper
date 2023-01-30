@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.fixed-position {
+  position: fixed;
+}
 * {
   padding: 0%;
   margin: 0%;

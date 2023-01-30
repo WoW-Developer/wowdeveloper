@@ -14,7 +14,7 @@ export default function scrollto() {
         )
         // the registration is async and it returns a promise
         .then(function (reg) {
-          console.log("Registration Successful");
+          //console.log("Registration Successful");
         });
     }
     if (history.scrollRestoration) {
@@ -25,7 +25,6 @@ export default function scrollto() {
       };
     }
     function handleClick() {
-      console.log("HEhE");
       document.getElementById("quote").scrollIntoView();
     }
     click_ref.current = handleClick;
@@ -33,7 +32,7 @@ export default function scrollto() {
 
   return (
     <div>
-      <div className="text-center pt-7 z-[-1] text-black cursor-pointer">
+      <div className="text-center pt-7  text-black cursor-pointer">
         <div onClick={() => click_ref.current()}>
           {" "}
           <AiFillDownCircle className="text-center mx-auto" size={40} />
