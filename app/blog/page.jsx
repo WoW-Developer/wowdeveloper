@@ -28,14 +28,14 @@ const page = async () => {
           >
            
             <Image
-            className="col-span-6 bg-cover rounded-l-lg h-44"
+            className="col-span-5 bg-cover rounded-l-lg h-44"
       src={xata.image}
       width={500}
       height={500}
       style={{objectFit: "cover"}}
       alt="Picture of the Blog Post"
     />
-            <div className="col-span-4 relative h-full">
+            <div className="col-span-5 relative h-full">
               <div className="p-2">
                 <h1>{xata.title}</h1>
               </div>
