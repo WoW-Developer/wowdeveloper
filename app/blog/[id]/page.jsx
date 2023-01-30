@@ -29,7 +29,7 @@ export default async function Page({params}) {
                <div className="h-64 w-full p-2 rounded-lg">
                 
             <Image
-      src=`${xx.image}`
+      src={xx.image}
       width={500}
       height={500}
       style={{objectFit: "contain"}}
