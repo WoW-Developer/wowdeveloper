@@ -30,7 +30,7 @@ export default async function Page({params}) {
       src={xx.image}
       width={500}
       height={500}
-      style={{objectFit: "cover"}}
+      style={{borderRadius: '5px', overflow: 'hidden'}}
       alt="Picture of the Blog Post"
     />
                 <div className="text-3xl capitalize mt-2 font-semibold">{xx.title}</div>
