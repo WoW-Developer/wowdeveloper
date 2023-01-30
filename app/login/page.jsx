@@ -63,7 +63,7 @@ const page = () => {
             `${current.displayName}` +
             "\nYour Email is " +
             `${current.email}`
-          : "Login With Google"}
+          : "Login"}
       </button>
     </div>
   );
