@@ -23,6 +23,9 @@ const mobilenav = () => {
       <div className={nav ? show : hide}>
         <ul className="flex justify-center items-center cursor-pointer h-screen w-screen bg-primary flex-col text-white">
           <li className={textstyle} onClick={toggleNav}>
+            <Link href={"/"}>Home</Link>
+          </li>
+          <li className={textstyle} onClick={toggleNav}>
             <Link href={"/blog"}>Blog</Link>
           </li>
           <li className={textstyle} onClick={toggleNav}>
