@@ -32,7 +32,7 @@ const page = async () => {
       src={xata.image}
       width={500}
       height={500}
-      style={{}}
+      style={{objectFit: "cover"}}
       alt="Picture of the Blog Post"
     />
             <div className="col-span-6 relative h-full">
