@@ -25,10 +25,10 @@ export default async function Page({params}) {
   
     <div className="h-full w-full mx-auto p-4 max-w-[600px] pt-16 flex flex-col ">
              {data?.map((xx)=>(<div key={xx}>
-  <div className="h-80 w-full border border-2 p-2 border-slate-50 rounded-3xl overflow-hidden">          
+  <div className="h-80 w-full border border-1 border-slate-50 rounded-xl overflow-hidden">          
   <Image
       src={xx.image}
-      height={`${className='h-80'}`}
+      height={1080}
       width={1920}
       style={{objectFit:'cover'}}
       alt="Picture of the Blog Post"
