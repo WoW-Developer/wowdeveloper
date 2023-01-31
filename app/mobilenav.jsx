@@ -17,7 +17,7 @@ const mobilenav = () => {
 
   return (
     <>
-      <div className="text-white z-50 flex sm:hidden" onClick={toggleNav}>
+      <div className="text-white z-[1100] flex sm:hidden" onClick={toggleNav}>
         {nav ? <IoClose size={24} /> : <IoMenu size={24} />}
       </div>
       <div className={nav ? show : hide}>
@@ -40,7 +40,7 @@ const mobilenav = () => {
   );
 };
 
-const show = `fixed top-0 right-0 z-[40] ease-in duration-400 left-0 overflow-hidden sm:hidden`;
+const show = `fixed top-0 right-0 z-[90] ease-in duration-400 left-0 overflow-hidden sm:hidden`;
 const hide = `fixed top-[-1080px] right-0 opacity-0 ease-out duration-400 left-0 sm:hidden`;
 const textstyle = `hover:text-white  text-xl hover:align-top p-2 rounded-lg`;
 export default mobilenav;
