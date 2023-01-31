@@ -9,6 +9,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
 
+
+  plugins: [require("@tailwindcss/line-clamp"),require("@tailwindcss/forms")],
+  
   theme: {
     colors: {
       primary: "#0B0D75",
@@ -18,11 +21,10 @@ module.exports = {
       light_grey: "#AAB8C2",
       dark_grey: "#657786",
       black: "#14171A",
-      transparent: "#00FFFFFF",
+      transparent: '#22332200',
       blue: "#00008B",
     },
     extend: {},
   },
 
-  plugins: [require("@tailwindcss/line-clamp"), require("@tailwindcss/forms")],
 };
