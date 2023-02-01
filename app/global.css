@@ -5,6 +5,12 @@
 .fixed-position {
   position: fixed;
 }
+
+.required:after {
+    content:" *";
+    color: '#fff';
+  }
+
 * {
   padding: 0%;
   margin: 0%;

@@ -1,11 +1,13 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef} from "react"
 import { AiFillDownCircle } from "react-icons/ai";
 
 export default function scrollto() {
   const click_ref = useRef(null);
 
   useEffect(() => {
+    
+    document.getElementById('btns').style.display='block'
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker
         .register(
@@ -13,7 +15,7 @@ export default function scrollto() {
           "/sw.js"
         )
         // the registration is async and it returns a promise
-        .then(function (reg) {
+        .then(function(reg) {
           //console.log("Registration Successful");
         });
     }
@@ -32,7 +34,7 @@ export default function scrollto() {
 
   return (
     <div>
-      <div className="text-center pt-7  text-black cursor-pointer">
+      <div id='btns' className="text-center pt-7  text-black cursor-pointer">
         <div onClick={() => click_ref.current()}>
           {" "}
           <AiFillDownCircle className="text-center mx-auto" size={40} />
