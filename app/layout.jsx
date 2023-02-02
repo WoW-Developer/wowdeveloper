@@ -1,9 +1,9 @@
 import "./global.css";
-import NAV from "./NAV";
+import NAV from "./ui/NAV";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html data-theme="pastel" lang="en">
       <head />
       <body lang="en">
         <div className="flex flex-col tracking-tight">

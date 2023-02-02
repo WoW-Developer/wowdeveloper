@@ -1,6 +1,8 @@
 import React from "react";
 
 export async function getdata() {
+  //  const delay = (time) => new Promise((res) => setTimeout(res, time));
+
   const res = await fetch(`https://type.fit/api/quotes`, {
     next: { revalidate: 60 },
   });

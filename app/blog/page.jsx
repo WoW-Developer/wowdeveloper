@@ -1,9 +1,7 @@
-
 import Link from "next/link";
 import React from "react";
-import Image from 'next/image';
+import Image from "next/image";
 import { createClient } from "@supabase/supabase-js";
-
 const supabaseUrl = process.env.SUPA_URL;
 const supabaseKey = process.env.SUPA_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -20,42 +18,33 @@ const fetchBlogData = async () => {
 const page = async () => {
   const data = await fetchBlogData();
   return (
-  <div className="w-full p-4 h-full items-center text-black justify-center">
-      <div className="grid pt-14 place-content-center sm:grid-cols-2 w-full mx-auto max-w-[800px] gap-2">
+    <div className="w-full p-4 h-full items-center text-black justify-center">
+      <div className="grid pt-14 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-content-center w-fit mx-auto max-w-screen-lg gap-2">
         {data?.map((xata) => (
+          //TODO: Blog Card Starts Here
+
           <div
             key={xata}
-                className="rounded-lg border-black border grid grid-cols-10 place-content-center gap-1 bg-extra_extra_light_grey"
+            className="card card-compact w-full bg-base-100 shadow-xl"
           >
-    <div className="col-span-4 bg-cover rounded-l-lg overflow-hidden h-36 sm:h-44 w-full"  >  
-        
-   <Image   
-   height={800}
-   width={1200}
-      src={xata.image}
-    className="h-96 object-cover w-full"
-      alt="Picture of the Blog Post"
-    />
-
-    </div> 
-          <div className="col-span-6 w-full relative">
-              <div className="p-2 w-full font-semibold">
-                <h1>"{xata.title}"</h1>
+            <figure>
+              <Image
+                height={800}
+                width={1200}
+                src={xata.image}
+                className="h-52 object-cover w-full"
+                alt="Picture of the Blog Post"
+              />
+            </figure>
+            <div className="card-body text-accent">
+              <h2 className="text-xl card-title">{xata.title}</h2>
+              <p className="text-md line-clamp-2 pr-3">{xata.description}</p>
+              <div className="card-actions justify-between">
+                <h1 className="mt-1">{xata.date}</h1>
+                <button className="btn btn-xs text-sm sm:text-md text-base-100 sm:btn-sm btn-primary">
+                  <Link href={`/blog/${xata.uuid}`}>Read More</Link>
+                </button>
               </div>
-              <div className="p-2 w-full line-clamp-2 pt-0">
-                <h1>
-                  {xata.description}
-                </h1>
-              </div>
-              <div className="p-2 pt-0">
-              <h1>{xata.created_at}</h1>
-              </div>
-              <Link
-                className="text-primary p-2 pb-0 absolute bottom-0"
-                href={`/blog/${xata.uuid}`}
-              >
-                Read More
-              </Link>
             </div>
           </div>
         ))}
