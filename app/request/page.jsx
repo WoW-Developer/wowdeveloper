@@ -104,14 +104,14 @@ const page = () => {
 <>   
 <div  id='fc'  style={{display:'none'}}  className='fixed flex-col top-0 left-0 h-screen flex items-center justify-center w-screen z-[21000] bg-white '>
   
-   <p className='text-primary'> Thank you! 
+   <p className='text-primary max-w-screen-sm'> Thank you! 
    Have a Nice Time Ahead!</p>
-   <Link href='/' className='bg-primary text-white rounded mt-2 mx-auto p-2'>Home</Link>
+   <Link href='/' className='bg-primary w-fit mx-auto hover:bg-black focus:bg-black focus:ring-0 focus:outline-none self-center p-2 mt-2 rounded text-white'>Home</Link>
   
    </div>
    <div className="h-full min-h-fit pt-14 w-full flex items-center justify-center">
       
-      <div className="bg-white w-full relative border-black rounded border text-black mx-4">
+      <div className="bg-white w-full max-w-screen-sm relative border-black rounded border text-black mx-4">
 
          <form onSubmit={e=>{
           e.preventDefault()
