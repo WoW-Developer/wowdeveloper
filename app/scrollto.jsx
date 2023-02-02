@@ -34,7 +34,7 @@ export default function scrollto() {
 
   return (
     <div>
-      <div id='btns' className="text-center pt-7  text-black cursor-pointer">
+      <div id='btns' className="text-center pt-7 hover:outline-none  text-black cursor-pointer">
         <div onClick={() => click_ref.current()}>
           {" "}
           <AiFillDownCircle className="text-center mx-auto" size={40} />
