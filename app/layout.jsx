@@ -7,7 +7,7 @@ export default function RootLayout({ children }) {
       <head />
       <body lang="en">
         <div className="flex flex-col tracking-tight">
-          <div className="w-full h-screen ">
+          <div className="w-full min-w-[320px] h-screen ">
             <NAV />
             {children}
           </div>

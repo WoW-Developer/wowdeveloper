@@ -10,6 +10,7 @@ module.exports = {
   ],
 
   daisyui: {
+    logs: false,
     themes: [
       {
         pastel: {

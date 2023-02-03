@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Mobilenav from "./mobilenav";
-
+import Loginface from "./loginface";
 const NAV = () => {
   return (
     <main>
@@ -14,9 +14,9 @@ const NAV = () => {
           >
             <Link href={"/"}>WoW Developer</Link>
           </h1>
-          <nav>
+          <nav className="flex items-center ">
             {/* Menu Desktop */}
-            <ul className="flex-row hidden sm:flex text-white cursor-pointer">
+            <ul className="flex-row items-center hidden sm:flex text-white cursor-pointer">
               <li className="hover:text-white hover:align-top p-2 rounded-lg">
                 <Link href={"/blog"}>Blog</Link>
               </li>
@@ -25,6 +25,9 @@ const NAV = () => {
               </li>
               <li className="hover:text-white hover:align-top p-2 rounded-lg">
                 <Link href={"/request"}>Request</Link>
+              </li>
+              <li className="hover:text-white hover:align-top p-2 rounded-lg">
+              <Loginface/>
               </li>
             </ul>
           </nav>

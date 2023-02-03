@@ -18,13 +18,13 @@ const fetchBlogData = async () => {
 const page = async () => {
   const data = await fetchBlogData();
   return (
-    <div className="w-full p-4 h-full items-center text-black justify-center">
-      <div className="grid pt-14 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-content-center w-fit mx-auto max-w-screen-lg gap-2">
-        {data?.map((xata) => (
+    <div className="w-full p-4 py-14 h-full items-center text-black justify-center">
+      <div className="grid py-14 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-content-center w-fit mx-auto max-w-screen-lg gap-2">
+        {data?.map((xata,index) => (
           //TODO: Blog Card Starts Here
 
           <div
-            key={xata}
+            key={index}
             className="card card-compact w-full bg-base-100 shadow-xl"
           >
             <figure>
@@ -34,6 +34,7 @@ const page = async () => {
                 src={xata.image}
                 className="h-52 object-cover w-full"
                 alt="Picture of the Blog Post"
+                priority='false'
               />
             </figure>
             <div className="card-body text-accent">

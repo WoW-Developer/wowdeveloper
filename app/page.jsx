@@ -20,11 +20,8 @@ export default async function Page() {
         </h1>
 
         <Suspense className="h-fit" fallback={<Loading />}>
-          <div className="card card-compact w-full max-w-[800px] bg-base-100 border-4 shadow-md">
-            <div className="card-body justify-center">
-              <h1 className="text-xl mx-auto mt-2 font-semibold">
-                -:Quote For You:-
-              </h1>
+          <div className="card card-compact max-w-[600px] mx-12 bg-base-100 border-4 shadow-md">
+            <div className="card-body px-12 text-center justify-center">
               <Quote />
             </div>
           </div>
