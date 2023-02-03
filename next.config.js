@@ -8,6 +8,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: '**.pexels.com',
       },
+      {
+        protocol:'https',
+        hostname:'**.googleusercontent.com',
+      },
     ],
   },
   

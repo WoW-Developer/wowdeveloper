@@ -149,7 +149,7 @@ scale-75 -top-2.5 -left-0.5 text-dark_grey peer-placeholder-shown:text-light_gre
               Enter Valid Email
             </h1>
 
-            <div className="relative border rounded border mt-2 p-2 border-primary">
+            <div className="relative rounded border mt-2 p-2 border-primary">
               <input
                 tabIndex={0}
                 autoComplete="off"
@@ -178,7 +178,7 @@ scale-75 -top-2.5 -left-0.5 text-dark_grey peer-placeholder-shown:text-light_gre
               Enter Name
             </h1>
 
-            <div className="relative border rounded border mt-2 p-2 border-primary">
+            <div className="relative rounded border mt-2 p-2 border-primary">
               <input
                 tabIndex={0}
                 autoComplete="off"
@@ -216,7 +216,7 @@ setDate(e.target.value)}}/>
 </div>
 */}
 
-            <div className="relative border rounded border mt-2 p-2 border-primary">
+            <div className="relative  rounded border mt-2 p-2 border-primary">
               <textarea
                 tabIndex={0}
                 rows="4"

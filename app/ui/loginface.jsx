@@ -1,14 +1,15 @@
 'use client'
-import React, { use, useEffect, useState } from 'react'
-import {HiOutlineUserCircle} from 'react-icons/hi'
+import React, {useEffect, useState } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
 import { getAuth } from 'firebase/auth'
 import { app } from "../firebase/firebase";
 import { useRouter } from 'next/navigation';
 
 const auth = getAuth(app);
+
 const loginface = () => {
-    const router = useRouter();
+  const PCS = './team.png'
+  const router = useRouter();
     const[xuser, setxUser] = useState()
     const[photo, setPhoto] = useState()
 
@@ -35,7 +36,7 @@ const loginface = () => {
       
 
   return (
-    <div style={{backgroundImage:xuser?`url(${photo})`:<HiOutlineUserCircle/>,display:dis?'block':'none'}} className='btn btn-xs align-middle bg-black~ btn-circle' onClick={router.push('/login')}>
+    <div style={{backgroundImage:xuser?`url(${photo})`:`url(${PCS})`,backgroundSize:'cover',display:dis?'block':'none'}} className='btn btn-sm align-middle bg-white mx-2 btn-circle' onClick={()=>router.push('/login')}>
     </div>
   )
 }

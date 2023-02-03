@@ -26,7 +26,7 @@ const NAV = () => {
               <li className="hover:text-white hover:align-top p-2 rounded-lg">
                 <Link href={"/request"}>Request</Link>
               </li>
-              <li className="hover:text-white hover:align-top p-2 rounded-lg">
+              <li className="hover:text-white hover:align-top h-full rounded-lg">
               <Loginface/>
               </li>
             </ul>
