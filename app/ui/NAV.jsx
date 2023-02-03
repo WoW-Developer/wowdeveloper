@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Mobilenav from "./mobilenav";
 import Loginface from "./loginface";
+import { Suspense } from "react";
+
 const NAV = () => {
   return (
     <main>
@@ -27,7 +29,9 @@ const NAV = () => {
                 <Link href={"/request"}>Request</Link>
               </li>
               <li className="hover:text-white hover:align-top h-full rounded-lg">
-              <Loginface/>
+                <Suspense>
+                  <Loginface />
+                </Suspense>
               </li>
             </ul>
           </nav>

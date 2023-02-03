@@ -3,6 +3,8 @@ import { useState } from "react";
 import React from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 import Link from "next/link";
+import { Suspense } from "react";
+import Loginface from "./loginface";
 
 const mobilenav = () => {
   const [nav, setnav] = useState(false);
@@ -33,6 +35,11 @@ const mobilenav = () => {
           </li>
           <li className={textstyle} onClick={toggleNav}>
             <Link href={"/request"}>Request</Link>
+          </li>
+          <li className={textstyle} onClick={toggleNav}>
+            <Suspense>
+              <Loginface />
+            </Suspense>
           </li>
         </ul>
       </div>

@@ -7,7 +7,7 @@
 
     "categories": ["development", "web", "android"],
 
-	"start_url": "../",
+	"start_url": "/",
 
     "icons": [
        {
