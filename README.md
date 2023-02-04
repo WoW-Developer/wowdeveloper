@@ -1,5 +1,5 @@
 
-![Logo](https://wowdeveloperssr.vercel.app/apple-touch-icon.png)
+![Logo](https://wowdeveloper.vercel.app/apple-touch-icon.png)
 ## WoW Developer
 
 This is the official repository of WoW Developer generated in Next.JS
