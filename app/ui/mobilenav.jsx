@@ -4,7 +4,6 @@ import React from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 import Link from "next/link";
 import { Suspense } from "react";
-import Loginface from "./loginface";
 
 const mobilenav = () => {
   const [nav, setnav] = useState(false);
