@@ -36,11 +36,6 @@ const mobilenav = () => {
           <li className={textstyle} onClick={toggleNav}>
             <Link href={"/request"}>Request</Link>
           </li>
-          <li className={textstyle} onClick={toggleNav}>
-            <Suspense>
-              <Loginface />
-            </Suspense>
-          </li>
         </ul>
       </div>
     </>
